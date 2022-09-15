@@ -3,8 +3,8 @@
 setup:
 	./scripts/setup.sh
 
-start: setup
+start: build
 	./scripts/start.sh
 
-build:
+build: setup
 	./scripts/build.sh
