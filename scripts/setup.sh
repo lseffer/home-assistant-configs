@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir ./homeassistant-data
-mkdir ./zigbee2mqtt-data
-mkdir ./mosquitto-data
+mkdir -p ./homeassistant-data
+mkdir -p ./zigbee2mqtt-data
+mkdir -p ./mosquitto-data
