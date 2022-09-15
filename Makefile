@@ -8,3 +8,6 @@ start: build
 
 build: setup
 	./scripts/build.sh
+
+stop:
+	./scripts/stop.sh
