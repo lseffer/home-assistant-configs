@@ -1,6 +1,7 @@
 version: "3"
 services:
   mqtt:
+    container_name: mqtt
     image: eclipse-mosquitto:2.0
     restart: unless-stopped
     volumes:
@@ -25,6 +26,7 @@ services:
       - /dev/ttyUSB0:/dev/ttyUSB0
 
   homeassistant:
+    container_name: homeassistant
     image: homeassistant/home-assistant
     restart: always
     network_mode: host
