@@ -23,7 +23,7 @@ services:
     environment:
       - TZ=Europe/Berlin
     devices:
-      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/ttyUSB1:/dev/ttyUSB0
 
   homeassistant:
     container_name: homeassistant
@@ -35,3 +35,5 @@ services:
     volumes:
       - ./homeassistant-data:/config
       - "/etc/localtime:/etc/localtime:ro"
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
