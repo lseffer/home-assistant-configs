@@ -1,7 +1,8 @@
 - platform: scrape
   resource: https://elen.nu/timpriser-pa-el-for-elomrade-se3-stockholm/
-  name: Electricity price
+  name: Electricity price SE3
   select: ".text-lg:is(span)"
+  device_class: "monetary"
   index: 1
-  value_template: '{{ value | replace (",", ".") | float }}'
-  unit_of_measurement: "öre/kWh"
+  value_template: '{{ value | replace (",", ".") | float | multiply(0.01) }}'
+  unit_of_measurement: "SEK/kWh"
