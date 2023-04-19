@@ -1,7 +1,7 @@
 - platform: scrape
-  resource: https://elen.nu/timpriser-pa-el-for-elomrade-se3-stockholm/
+  resource: https://elen.nu/dagens-spotpris/se3-stockholm/
   name: Electricity price SE3
-  select: ".text-lg:is(span)"
+  select: ".text-lg.font-bold"
   device_class: "monetary"
   index: 1
   value_template: '{{ value | replace (",", ".") | float | multiply(0.01) }}'
