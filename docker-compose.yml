@@ -27,7 +27,7 @@ services:
 
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/home-assistant
+    image: homeassistant/home-assistant:2023.4
     restart: always
     network_mode: host
     depends_on:
